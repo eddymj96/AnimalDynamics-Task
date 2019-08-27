@@ -1,5 +1,13 @@
 # AnimalDynamics-Task
 
+
+## Installation
+- Tested on Ubuntu 16.04
+- Open a terminal and clone the repo using ```git clone https://github.com/eddymj96/AnimalDynamics-Task```
+
+Due to the nature of the problem and the assumptions it seems logical to work with arrays/matrices thus ```numpy``` was used. Additionally, the graphing and visualisation tool ```matplotlib``` was employed to illustrate the map and paths of the robots. 
+Both need to be installed to run the program, this can be done however the user wishes; a quick system-wide installation can be done by simply running ```bash install_script.sh``` in a terminal.
+
 ## Task 1:
 Given the task of implementing a robot that is to sweep through a 2D map, exploring the entire area whilst avoiding obstacles. Starting at one corner of grid and ending another.
 
@@ -12,7 +20,7 @@ Given the task of implementing a robot that is to sweep through a 2D map, explor
 </p>
 
 ## Procedure
-Due to the nature of the problem and the assumptions it seems logical to work with arrays/matrices  
+
 1.
 The robot will explore with a simple breadth-first search (BFS)
 

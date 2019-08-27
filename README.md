@@ -18,7 +18,8 @@ Given the task of implementing a robot that is to sweep through a 2D map, explor
 </p>
 
 - The robot is a simple point-mass robot that can only move vertically or horizontally along the map's points and can turn on the spot i.e. change directions whilst on the same point.  
-- It senses obstacles with a one-node depth 'sensor' directed in front of it.
+
+- The robot has no previous 'blobal' map knowledge and senses obstacles with a one-node depth 'sensor' directed in front of it.
 <p align="center">
 <img src="https://github.com/eddymj96/AnimalDynamics-Task/blob/master/Assets/sensorillu.png" width="20%" height="20%" />
 </p>

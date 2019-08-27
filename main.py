@@ -11,14 +11,13 @@ max_obstacle_no = 5
 obstacle_no = np.random.randint(max_obstacle_no) + 2
 print(obstacle_no)
 
+
 for i in range(obstacle_no):
 
     # block out a maximum area of the grid for the obstacle
     max_dims = [np.random.randint(grid.shape[0]/2), np.random.randint(grid.shape[1]/2)]
     binary_array = np.ones((max_dims[0], max_dims[1]))
-    #print(binary_array.shape)
-    #print(grid.shape)
-    #print(max_dims[1])
+
     starting_pos = [np.random.randint(grid.shape[0]- max_dims[0]), np.random.randint(grid.shape[1] - max_dims[1])]
 
     while np.any(binary_array * grid[starting_pos[0]: starting_pos[0] + max_dims[0], starting_pos[1]: starting_pos[1] + max_dims[1]]):
@@ -82,8 +81,8 @@ robot_path[robot_path == 0] = np.nan
 ax.imshow(np.transpose(robot_path), origin='lower', cmap = my_cmap, vmin=0, vmax=1, alpha = 0.5)
 ax.set_xticks(np.arange(final.shape[0])- 0.5)
 ax.set_yticks(np.arange(final.shape[1])- 0.5)
-ax.set_xticklabels(np.arange(0, grid.shape[0], 1))
-ax.set_yticklabels(np.arange(0, grid.shape[1], 1))
+ax.set_xticklabels([])
+ax.set_yticklabels([])
 
 
 ax.grid(which='major')

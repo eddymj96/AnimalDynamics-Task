@@ -1,6 +1,14 @@
 import numpy as np
 import task_classes as tc
 import traversal_algorithms as ta
+import sys
+
+argv = str(sys.argv)
+if len(sys.argv) == 1:
+    print("No input arguments were passed")
+    exit
+else:
+    no_of_robots = int(sys.argv[1])
 
 ## ---- Setup Grid and Obstacles ---- 
 
@@ -14,7 +22,7 @@ course = tc.course(length, width, obstacle_no)
 
 ## ---- Solving with Robot ----
 
-no_of_robots = 3
+
 robots = []
    
 for i in range(no_of_robots):

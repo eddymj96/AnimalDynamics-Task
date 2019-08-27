@@ -1,9 +1,14 @@
 # AnimalDynamics-Task
 
 
-## Installation
+## Installation and Usage
+- Using Python3
 - Tested on Ubuntu 16.04
 - Open a terminal and clone the repo using ```git clone https://github.com/eddymj96/AnimalDynamics-Task```
+- Change directories using ```cd AnimalDynamics-Task```
+- run ```Python3 main.py ``` followed by the number of robots you want to use
+### Example 
+ ```Python3 main.py 3 ```
 
 Due to the nature of the problem and the assumptions it seems logical to work with arrays/matrices thus ```numpy``` was used. Additionally, the graphing and visualisation tool ```matplotlib``` was employed to illustrate the map and paths of the robots. 
 Both need to be installed to run the program, this can be done however the user wishes; a quick system-wide installation can be done by simply running ```bash install_script.sh``` in a terminal.

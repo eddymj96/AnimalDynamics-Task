@@ -18,3 +18,8 @@ The robot will explore with a simple breadth-first search (BFS)
 The breadth-first search currently does not attempt to avoid a robot going over its previous nodes in order to visit others (the robot's respective previous path, it won't go over other robot's paths) in the queue. Whilst it ensure coverage, the sweep is inneficient; a hueristic form of the BFS could be derived in such a way that it lessens or even minimises visitation of previous nodes. 
 
 Due to the assumptions made and the constraints that the robots must all terminate at the same point without visiting each others visited nodes a complicaiton arrives. Since the exit is situated in the corner, there are only 2 unique nodes that would allow a robot to traverse to the exit. Thus a compromise was made, when the map had been fully been explored the robots would disregard previously explored nodes from other robots to reach the exit.
+
+A similar problem occasionally arises when the map is arranged in such a way that the exploration of some robots can "trap" a robot from visiting the rest of the map due as shown:
+<p align="center">
+<img src="https://github.com/eddymj96/AnimalDynamics-Task/blob/master/Assets/Trapped1.png" width="50%" height="50%" />
+</p>

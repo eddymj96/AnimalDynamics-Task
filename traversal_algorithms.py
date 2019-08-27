@@ -1,6 +1,5 @@
 import task_classes as tc
-import numpy as np
-        
+
 def explorer(course, robots):
     queues = []
 
@@ -9,7 +8,7 @@ def explorer(course, robots):
         queues.append(tc.queue())
         queues[i].enqueue(robots[i].position)
         course.mark_path(robots[i].position, i)
-    
+
     # While at least one queue is not empty
     while not all([ q.is_empty() for q in queues]):
         for j in range(len(queues)): 
@@ -17,7 +16,6 @@ def explorer(course, robots):
                 continue
             else:
                 robots[j].position = queues[j].dequeue()
-
                 for k in range(4): # for 4 rotations to return to original orientation
                     coordinate = robots[j].scan()
                     if course.node_is_unexplored(coordinate): 
@@ -27,4 +25,6 @@ def explorer(course, robots):
                     robots[j].turn()
 
     print("Solved")
+
     return course
+

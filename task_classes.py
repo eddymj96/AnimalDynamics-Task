@@ -68,8 +68,10 @@ class course:
         self.robot_paths[coordinate[0], coordinate[1], robot_no-1] = 1
     
     def node_is_unexplored(self, coordinate):
-        print(self.master_path_tracker[tuple(coordinate)])
         return (self.final[tuple(coordinate)] + self.master_path_tracker[tuple(coordinate)] == 0)
+    
+    def is_obstacle(self, coordinate):
+        return (self.final[tuple(coordinate)] == 1)
 
 
 class visualiser:
@@ -77,20 +79,24 @@ class visualiser:
         fig = p.figure()
 
         ax = fig.gca()
+        # Plot border and obstacles in black 
         ax.imshow(np.transpose(course.final), origin='lower', cmap = 'Greys')
 
-        course.robot_paths[course.robot_paths == 0] = np.nan
         cmap_colours = ['Oranges','Purples', 'Blues', 'Greens', 'Reds']
 
+        # Change 0 values to fully opaque
+        course.robot_paths[course.robot_paths == 0] = np.nan
         course.master_path_tracker[course.master_path_tracker == 0] = np.nan
         for i in range(course.robot_paths.shape[2]):
             cmap = cp.copy(p.get_cmap(cmap_colours[i % 5]))
             cmap.set_bad(alpha=0)
             ax.imshow(np.transpose(course.robot_paths[:,:,i]), origin='lower', cmap = cmap, vmin=0, vmax=1, alpha = 0.5)
 
+        # Set grid markings to proper itnervals
         ax.set_xticks(np.arange(course.final.shape[0])- 0.5)
         ax.set_yticks(np.arange(course.final.shape[1])- 0.5)
 
+        # Remove value labels from graph
         ax.set_xticklabels([])
         ax.set_yticklabels([])
 

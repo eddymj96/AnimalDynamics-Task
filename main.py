@@ -1,4 +1,3 @@
-import matplotlib.pyplot as p
 import numpy as np
 import task_classes as tc
 import traversal_algorithms as ta
@@ -15,7 +14,7 @@ course = tc.course(length, width, obstacle_no)
 
 ## ---- Solving with Robot ----
 
-no_of_robots = 4
+no_of_robots = 3
 robots = []
    
 for i in range(no_of_robots):
@@ -23,7 +22,7 @@ for i in range(no_of_robots):
 
 
 course.add_robot_paths(no_of_robots)
-
+# Run the modified BFS
 completed_course = ta.explorer(course, robots)
 
 # visualisation 

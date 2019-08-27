@@ -21,5 +21,5 @@ Due to the assumptions made and the constraints that the robots must all termina
 
 A similar problem occasionally arises when the map is arranged in such a way that the exploration of some robots can "trap" a robot from visiting the rest of the map due as shown:
 <p align="center">
-<img src="https://github.com/eddymj96/AnimalDynamics-Task/blob/master/Assets/Trapped1.png" width="50%" height="50%" />
+<img src="https://github.com/eddymj96/AnimalDynamics-Task/blob/master/Assets/Trapped1.png" width="80%" height="80%" />
 </p>
